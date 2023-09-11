@@ -35,45 +35,44 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "2750593496";
+    const serviceWorkerVersion = "396425362";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 
-  <link rel="preload" href="http://localhost:50162/assets/assets/images/Vrund%2520Raval%2520ultra.png" as="fetch" crossorigin>
+  
+  <style>
+
+    .loading {
+      position: absolute;
+      top: calc(50% - 5vw);
+      left: calc(50% - 5vw);
+      width: 10vw;
+      height: 10vw;
+      border: 5px solid #f0f0f0;
+      border-radius: 50%;
+      border-top: 5px solid black;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+  </style>
+
 
 </head>
 
 <body style="overflow: hidden;">
 
-  <div id="loading" class="loading">
-
-    <style>
-      .loading {
-        position: absolute;
-        top: calc(50% - 5vw);
-        left: calc(50% - 5vw);
-        width: 10vw;
-        height: 10vw;
-        border: 5px solid #f0f0f0;
-        border-radius: 50%;
-        border-top: 5px solid black;
-        animation: spin 1s linear infinite;
-      }
-
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-
-    </style>
-  </div>
-
+  <div id="loading" class="loading"></div>
 
   <script>
     window.addEventListener('load', function (ev) {
@@ -102,7 +101,7 @@
           loading.remove();
         }
 
-      }, 10000);
+      }, 20000);
     }
   </script>
 
